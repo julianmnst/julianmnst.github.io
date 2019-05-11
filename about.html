@@ -1,0 +1,74 @@
+---
+layout: page
+title: About me
+permalink: /about/
+---
+
+<style>
+  * {
+    font-family: "Courier New", Courier, monospace;
+  }
+
+  p {
+      opacity: 0;
+      margin-top: 25px;
+  
+      -webkit-transition: opacity 1s ease-in;
+         -moz-transition: opacity 1s ease-in;
+          -ms-transition: opacity 1s ease-in;
+           -o-transition: opacity 1s ease-in;
+              transition: opacity 1s ease-in;
+  }
+  
+  p.load {
+      opacity: 1;
+  }
+  </style>
+
+<p class="fade">
+    Born in Argentina in 1994.
+</p>
+<p class="fade">
+  Still alive.
+</p>
+<p class="fade">
+    I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences. 
+</p>
+<p class="fade">
+    I'm available for work.
+</p>
+<p class="fade">
+  Reach me at: <a href="mailto:julians.mg@gmail.com">julians.mg@gmail.com</a>
+</p>
+
+<p class="hidden">
+  I can also edit films, pictures, play the guitar, sing a bit, and act. But that's off-topic.
+</p>
+<script>
+  // Keeps count of paragraphs unveiled.
+  var count = 0;
+  
+  // Catching the Interval Id for further clearing.
+  var id = setInterval(fading, 500)
+  
+  // Fading logic
+  function fading() {
+    // All paragraphs
+    let paragraphs = document.getElementsByClassName("fade");
+    // Add each paragraph the class 'load'
+    paragraphs[count].className += " load";
+    // Increase count
+    count++;
+
+    // Clearing the interval when all paragraphs are shown.
+    if (count == paragraphs.length) {
+      clearInterval(id)
+      setTimeout(moreAboutMe, 4000)
+    }
+  }
+
+  // Show hidden message with a bit more of info about me.
+  function moreAboutMe() {
+    document.getElementsByClassName("hidden")[0].className += "fade load"
+  }
+</script>

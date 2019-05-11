@@ -1,0 +1,81 @@
+---
+layout: home
+---
+<style>
+  * {
+    font-family: "Courier New", Courier, monospace;
+  }
+
+  .outstand {
+    color: white;
+    background-color: black;
+  }
+
+  .yellow-bg {
+    background-color: rgb(199, 199, 37)!important;
+  }
+</style>
+<h2>
+  Web Experiences Designer. 
+</h2>
+<p>
+  Make your <span class="target"></span> <span class="outstand"> outstand</span>.
+</p>
+<p>
+   Create an experience that your audience will <span class="outstand"> love</span>.
+</p>
+<p>
+  Your website should be more than just a data container -- make your audience <span class="outstand">engage</span> with interactive experiences.
+  Create an entire standalone web experience or a complementary interactive site for your <span class="target"></span>.
+</p>
+
+<p>
+  You can make your ideas come true. And I want to help you make that happen.
+</p>
+
+<p>Let's get started. Reach me at: <a href="mailto:julians.mg@gmail.com">julians.mg@gmail.com</a></p>
+
+<script>
+  // More targets will be added soon
+  var targets = [
+    "personal brand",
+    "band",
+    "business",
+    "album"
+  ];
+
+  var targetElements = document.getElementsByClassName("target")
+
+  var targetCount = 0;
+  
+  var currentTarget = () => targets[targetCount];
+  
+  setTarget(currentTarget())
+  
+  var intervalId = setInterval(switchTraget, 3000);
+
+  function switchTraget() {
+    if (targetCount < (targets.length - 1)) {
+      currentTarget();
+      targetCount++;
+    }
+    else {
+      targetCount = 0;
+    }
+
+    setTarget(currentTarget())
+  }
+
+  function setTarget(target) {
+    for (let elem of targetElements) {
+      elem.innerHTML = target
+    }
+  }
+
+  for (let elem of document.getElementsByTagName("p")) {
+    elem.onclick = function() {
+      clearInterval(intervalId)
+    }
+  }
+  
+</script>
