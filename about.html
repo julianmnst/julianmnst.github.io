@@ -66,16 +66,11 @@ permalink: /about/
   // Avatar logic
   var lemur = document.getElementById("lemur");
 
-  lemur.onclick = function() {
-      console.log(lemur.className)
-    lemur.className += " hidden";
-  }
-
   // Will Lemur show up? Set to false to hide the lemur
   var showLemur = false;
 
   if (!showLemur) {
-      lemur.className += " hidden";
+      lemur.style.display= "none";
   }
 
   // Keeps count of paragraphs unveiled.
@@ -102,6 +97,6 @@ permalink: /about/
 
   // Show hidden message with a bit more of info about me.
   function moreAboutMe() {
-    document.getElementsByClassName("hidden")[1].className += "fade load"
+    document.getElementsByClassName("hidden")[0].className += "fade load"
   }
 </script>
