@@ -3,22 +3,42 @@ layout: default
 ---
 
 <style type="text/css" media="screen">
+  * {
+    font-family: "Courier New", Courier, monospace;
+  }
   .container {
     margin: 10px auto;
     max-width: 600px;
     text-align: center;
+    animation: disappear 5s ease-in;
+    animation-fill-mode: forwards;
+    animation-delay: 5s;
   }
+
   h1 {
     margin: 30px 0;
     font-size: 4em;
     line-height: 1;
     letter-spacing: -1px;
   }
+
+  @keyframes disappear {
+      from {
+          opacity: 1;
+      }
+      to {
+          opacity: 0;
+      }
+  }
 </style>
 
 <div class="container">
   <h1>404</h1>
-
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+  <h2> means <strong>page not found.</strong></h2>
 </div>
+<script>
+  console.log("You'll be redirected as soon as the message fades.")
+  setTimeout(() => {
+    window.location.href = 'https://julianmnst.github.io';
+  }, 10000)
+</script>
