@@ -9,13 +9,45 @@
     color: white;
     background-color: black;
   }
-/**
-    Text gitch effect
- */
-  .glitch-text {
-      animation: glitch 2s ease infinite;
-      animation-delay: 0.5s;
+
+  .button {
+    color: #2a343c;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 15px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 20px 20px -15px rgba(42,51,59,0.7), inset 0 -5px rgba(42,51,59,0.4);
+    transition: all 0.3s cubic-bezier(0, 0.35, 0.5, 1);
   }
+
+.button:hover {
+  color: #000;
+  transform: scale(1.15);
+  box-shadow: 0 22px 22px -15px rgba(42,51,59,0.7), inset 0 -5px rgba(42,51,59,0.4);
+}
+
+.button:focus,
+.button:active {
+  transform: scale(1);
+  box-shadow: 0 17px 17px -15px rgba(42,51,59,0.7), inset 0 -3px rgba(42,51,59,0.4);
+}
+
+.rectangle {
+  display: inline-block;
+  width: 55px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: #00ff98;
+}
+
+  /**
+    Text gitch effect
+  */
+.glitch-text {
+  animation: glitch 2s ease infinite;
+  animation-delay: 0.5s;
+}
 
   .love-text {
       position: absolute;

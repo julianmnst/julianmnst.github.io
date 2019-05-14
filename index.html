@@ -12,7 +12,7 @@ layout: home
    Create an experience that your audience will <span class="outstand"> love</span>.
 </p>
 <p>
-  Your website should be more than just a data container -- make your audience <span id="engage" class="outstand">engage</span> with interactive experiences.
+  Your website should be more than just a data container -- make your audience <span class="button rectangle">engage</span> with interactive experiences.
   Create an entire standalone web experience or a complementary interactive site for your <span class="target"></span>.
 </p>
 
@@ -22,55 +22,4 @@ layout: home
 
 <p>Let's get started. Reach me at <a href="mailto:julians.mg@gmail.com">julians.mg@gmail.com</a></p>
 
-<script>
-  // More targets will be added soon
-  var targets = [
-    "personal brand",
-    "band",
-    "business",
-    "album"
-  ];
-
-  // List of spots where target is displayed
-  var targetElements = document.getElementsByClassName("target")
-
-  // Counter
-  var targetCount = 0;
-
-  // Current target being displayed
-  var currentTarget = () => targets[targetCount];
-
-  // Display default target
-  setTarget(currentTarget())
-
-  // Interval between target & target
-  var intervalId = setInterval(switchTraget, 3000);
-
-  // Iterates over the targets list
-  function switchTraget() {
-    if (targetCount < (targets.length - 1)) {
-      currentTarget();
-      targetCount++;
-    }
-    else {
-      targetCount = 0;
-    }
-
-    setTarget(currentTarget())
-  }
-
-  // Sets target value
-  function setTarget(target) {
-    for (let elem of targetElements) {
-      elem.innerHTML = target
-    }
-  }
-
-  // If any of the paragraphs is clicked, target stops changing
-  for (let elem of document.getElementsByTagName("p")) {
-    elem.onclick = function() {
-      clearInterval(intervalId)
-    }
-  }
-
-</script>
+<script src="index.js" ></script>
