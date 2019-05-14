@@ -11,19 +11,20 @@
   }
 
   .button {
-    color: #2a343c;
+    color: #fff;
     font-size: 15px;
-    font-weight: bold;
+    font-weight: lighter;
     line-height: 15px;
     text-align: center;
     cursor: pointer;
-    box-shadow: 0 20px 20px -15px rgba(42,51,59,0.7), inset 0 -5px rgba(42,51,59,0.4);
+    padding: 2px;
+    text-shadow: 0 200px 200px -15px rgba(42,51,59,0.7), inset 0 -5px rgba(42,51,59,0.4);
     transition: all 0.3s cubic-bezier(0, 0.35, 0.5, 1);
   }
 
 .button:hover {
-  color: #000;
-  transform: scale(1.15);
+  color: #fff;
+  transform: scale(1.23);
   box-shadow: 0 22px 22px -15px rgba(42,51,59,0.7), inset 0 -5px rgba(42,51,59,0.4);
 }
 
@@ -38,7 +39,7 @@
   width: 55px;
   height: 20px;
   border-radius: 4px;
-  background-color: #00ff98;
+  background-color: rgb(245, 105, 24);
 }
 
   /**
