@@ -45,31 +45,30 @@
   /**
     Text gitch effect
   */
-.glitch-text {
-  animation: glitch 2s ease infinite;
-  animation-delay: 0.5s;
-}
-
-  .love-text {
-      position: absolute;
-      animation: love 10s ease infinite;
-      animation-delay: 2s;
-      border-radius: 100%;
-      padding: 4px;
+  .glitch-text {
+    animation: glitch 2s ease infinite;
+    animation-delay: 0.5s;
   }
 
-  @keyframes love {
-    0%, 10%, 30%, 60%, 80%, 100% {
-        border: 0px solid black;
-    }
-    20% {
-        border: 8px solid magenta;
-    }
-    50% {
-        border: 8px solid cyan;
-    }
-    70% {
-        border: 8px solid green;
+  button.love-text{
+    animation: sliding 1.2s ease-in-out;  /* animation set */
+    animation-play-state: paused;               /* but paused */
+    animation-fill-mode: forwards;
+    background: none;
+    border: none;
+    font-size: 1em;
+  }
+
+  button.love-text:hover{
+    animation-play-state: running;              /* trigger on hover */
+  }
+
+  @keyframes sliding {
+    to {
+      padding-left: 200px;
+      color: white;
+      background-color: red;
+      text-align: justify;
     }
   }
 
