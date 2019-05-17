@@ -1,0 +1,24 @@
+  * {
+    font-family: "Courier New", Courier, monospace;
+  }
+
+  .card {
+      max-width: 70%;
+      max-height: 200px;
+      border: 1px solid black;
+      background-color: white;
+      padding: 10px;
+  }
+
+  .card:hover {
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.397);
+      transform: scale(1.1)
+  }
+
+  .card .title {
+      font-size: 1.9em;
+  }
+
+  .card .toolbar {
+      text-align: right;
+  }
